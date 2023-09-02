@@ -56,7 +56,7 @@ MonoBehaviour:
   _soundValueText: {fileID: 0}
   _scrollBarMusic: {fileID: 0}
   _scrollBarSound: {fileID: 0}
-  _lewerTurnOn: {fileID: 0}
+  _lewerTurnOn: {fileID: 8300000, guid: 8a93e6ff8c7886b43b69552a4a6a4cb5, type: 3}
   _lewerTurnOff: {fileID: 0}
   _leverRenderer: {fileID: 0}
   _leverSprites: []

@@ -11,7 +11,7 @@ public class GameManager3 : GameManager
     }
     public override void TurnOnLewer()
     {
-        //_soundManager.PlayAudio(_lewerTurnOn);
+        _soundManager.PlayAudio(_lewerTurnOn);
         _isLeverPressed = true;
         _leverRenderer.sprite = _leverSprites[1];
         _doorAnimator.Play("DoorCycle");

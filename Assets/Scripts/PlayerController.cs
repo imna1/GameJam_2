@@ -69,11 +69,11 @@ public class PlayerController : MonoBehaviour
 
     protected virtual void Jump()
     {
-        if (Input.GetButtonDown("Jump") && _lastGroundedTime > 0f && _canMove)
+        if (Input.GetButtonDown("Jump") && _lastGroundedTime > 0f && _canMove && !IsPaused)
         {
             _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _jumpForce);
             _animator.SetBool("isUp", true);
-            //_soundManager.PlayAudio(_jumpSound);
+            _soundManager.PlayAudio(_jumpSound, Random.Range(0.8f, 1.2f));
         }
         if (_rigidbody.velocity.y < 0)
         {
@@ -99,7 +99,7 @@ public class PlayerController : MonoBehaviour
         if(collision.tag == "Obstacle")
         {
             _canMove = false;
-            //_soundManager.PlayAudio(_diyingSound);
+            _soundManager.PlayAudio(_diyingSound);
             GameManager.Instance.OnPlayerDied();
         }
         if (collision.tag == "Finish")

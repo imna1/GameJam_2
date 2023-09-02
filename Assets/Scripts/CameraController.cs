@@ -10,6 +10,8 @@ public class CameraController : MonoBehaviour
     [SerializeField] private float smoothTime = 0.1f;
     [SerializeField] private float maxScreenPoint = 0.2f;
     [SerializeField] private Transform target;
+    [SerializeField] private Transform _backGround;
+    [SerializeField] private Transform _backGroundFar;
 
     private void Update()
     {
@@ -19,5 +21,7 @@ public class CameraController : MonoBehaviour
 
         transform.position = Vector3.SmoothDamp(transform.position, destination, ref velocity, smoothTime);
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, 2, 39), Mathf.Clamp(transform.position.y, 1.5f, 26.5f), transform.position.z);
+        _backGroundFar.position = new Vector2((transform.position.x - 2) * 17 / 37 + 12 , (transform.position.y - 1.5f) * 20 / 25 + 4);
+        _backGround.position = new Vector2((transform.position.x - 2) * 25 / 37 + 12 , (transform.position.y - 1.5f) * 20 / 25 + 4);
     }
 }

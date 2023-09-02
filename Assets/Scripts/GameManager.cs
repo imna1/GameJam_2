@@ -101,14 +101,14 @@ public class GameManager : MonoBehaviour
     }
     public virtual void TurnOnLewer()
     {
-        //_soundManager.PlayAudio(_lewerTurnOn);
+        _soundManager.PlayAudio(_lewerTurnOn);
         _isLeverPressed = true;
         _leverRenderer.sprite = _leverSprites[1];
         _doorAnimator.Play("DoorOpen");
     }
     public virtual void TurnOffLewer()
     {
-        //_soundManager.PlayAudio(_lewerTurnOff);
+        _soundManager.PlayAudio(_lewerTurnOff);
         _isLeverPressed = false;
         _leverRenderer.sprite = _leverSprites[0];
     }
@@ -133,5 +133,9 @@ public class GameManager : MonoBehaviour
     public virtual void OnPlayerDied()
     {
         Invoke("Restart", 1f);
+    }
+    public virtual bool CheckDistance(Vector2 pos)
+    {
+        return false;
     }
 }

@@ -29,6 +29,13 @@ public class SoundManager : MonoBehaviour
 
     public void PlayAudio(AudioClip clip)
     {
+        audioSource.pitch = 1;
+        audioSource.clip = clip;
+        audioSource.Play();
+    }
+    public void PlayAudio(AudioClip clip, float pitch)
+    {
+        audioSource.pitch = pitch;
         audioSource.clip = clip;
         audioSource.Play();
     }

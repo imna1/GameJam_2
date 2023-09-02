@@ -140,8 +140,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _groundCheck: {fileID: 5765104777265004648}
-  _diyingSound: {fileID: 0}
-  _jumpSound: {fileID: 0}
+  _diyingSound: {fileID: 8300000, guid: 53575412531acab4e8112b87cb0e9f58, type: 3}
+  _jumpSound: {fileID: 8300000, guid: ee73baed67c2b5c4dbd3cc1d91b10b5e, type: 3}
   _walkSound: {fileID: 0}
 --- !u!50 &5765104777372270601
 Rigidbody2D:

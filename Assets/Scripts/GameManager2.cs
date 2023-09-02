@@ -24,7 +24,7 @@ public class GameManager2 : GameManager
     }
     public override void TurnOnLewer()
     {
-        //_soundManager.PlayAudio(_lewerTurnOn);
+        _soundManager.PlayAudio(_lewerTurnOn);
         int closestLeverIndex = 0;
         float minDst = Vector2.Distance(_player.position, _levers[0].position);
         for (int i = 1; i < _levers.Length; i++)
@@ -46,7 +46,7 @@ public class GameManager2 : GameManager
     }
     public override void TurnOffLewer()
     {
-        //_soundManager.PlayAudio(_lewerTurnOff);
+        _soundManager.PlayAudio(_lewerTurnOff);
         for (int i = 0; i < _levers.Length; i++)
         {
             _isLeversPressed[i] = false;
